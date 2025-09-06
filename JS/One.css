@@ -1,0 +1,56 @@
+/* body {
+  font-family: Arial;
+}
+
+#mainImg {
+  width: 35%;
+}
+.green{
+  color:purple;
+  background-color: yellow;
+}
+.blue{
+  color:yellow;
+  background-color: red;
+  text-decoration: underline black wavy;
+}
+.underline{
+  text-decoration:underline black wavy ;
+}
+
+.box {
+  border: 0.25px solid black;
+  background-color: lightgray;
+  width: 200px;
+  padding: 1rem;
+}
+.boxbg{
+  color:black;
+  background-color: aqua;
+}
+.boxLink {
+  text-decoration: none;
+}
+.oldImg {
+  height: 200px;
+  width: 200px;
+  margin-right: 1rem;
+}
+#description {
+  background-color: antiquewhite;
+}
+.yellowbg{
+  background-color: yellow;
+  color: black;
+  text-decoration: underline red wavy;
+} */
+.redbg{
+  color:red;
+}
+.bluebg{
+  color:blue;
+}
+.dbb{
+  border: 2px solid black;
+  background-color: pink;
+}
