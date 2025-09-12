@@ -1,30 +1,75 @@
+
 // code for changing color of heading
 let h1 = document.querySelector("h1");
 // console.log(h1);
 function changecolor(color , delay){
     return new Promise((resolve , reject)=>{
         setTimeout(()=>{
+            let num = Math.floor(Math.random()*5)+1;
+            if(num>3){
+                reject("promise rejected");
+            }
             h1.style.color = color;
             resolve("color changed");
 
         } , delay);
     });
 }
-changecolor("green" , 1000)
-.then(()=>{
-    console.log("red color was changed");
-    return changecolor("green" , 2000);
+async function demo(){
+   try{ await changecolor("red" , 1000);
+    await changecolor("pink" , 1000);
+    await changecolor("blue" , 1000);
+    await changecolor("green" , 1000);
+   }
+   catch(err){
+    console.log("The error is : " ,err);
+    console.log(err);
+   }
+    console.log("HERE I AM !!")
+}
+// we do it easily by using the w\aync and await in it
+async function greet(){
+    return "hello World";
+}
+// this returns the promise which is in fulfilled state
+// it returns promise but we didnot make promise
+// this is due to the async keyword 
+async function hello(){
+    throw "some error occurred";
+    return"hello";
+}
+// this returns the promise which is in rejected state
+async function fd(){
+    abdcf.abc();
+    return"yes";
+}
+// this returns the promise which is in rejected state
+greet()
+.then((result)=>{
+    console.log("promise was resolved");
+    console.log("result was :" ,result);
 })
-.then(()=>{
-    console.log("green color");
-    return changecolor("pink" , 1000);
-})
-.then(()=>{
-    console.log("pink color it is!!!!!!");
-})
-.catch((error)=>{
-    console.log("error" , error);
-})
+.catch((err) =>{
+    console.log("promise was rejected due to :" ,err);
+});
+let demo = async()=>{
+    return 5;
+}     
+// changecolor("green" , 1000)
+// .then(()=>{
+//     console.log("red color was changed");
+//     return changecolor("green" , 2000);
+// })
+// .then(()=>{
+//     console.log("green color");
+//     return changecolor("pink" , 1000);
+// })
+// .then(()=>{
+//     console.log("pink color it is!!!!!!");
+// })
+// .catch((error)=>{
+//     console.log("error" , error);
+// })
 // function savetoDB(data){
 //     return new Promise((resolve , reject) => {
 //         let is = Math.floor(Math.random()*10)+1;
